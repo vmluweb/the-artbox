@@ -27,17 +27,20 @@
             <?php foreach ($oeuvres as $oeuvre) : ?>
 
                 <article class="oeuvre">
-                    <a href="<?php echo $oeuvre['url']; ?>">
-                        <img src=<?php echo $oeuvre['image']; ?> alt="Dodomu">
-                        <h2><?php echo $oeuvre['title']; ?></h2>
-                        <p class="description"><?php echo $oeuvre['artist']; ?></p>
+                    <?php echo '<a href="oeuvre.php?id=' . $oeuvre['id'] . '">'; ?>
+                    <img src=<?php echo $oeuvre['image']; ?>>
+                    <h2><?php echo $oeuvre['title']; ?></h2>
+                    <p class="description"><?php echo $oeuvre['artist']; ?></p>
                     </a>
                 </article>
             <?php endforeach ?>
         </div>
     </main>
     <footer>
+
+        <!-- Inclusion du pied de page du site -->
         <?php include_once('footer.php'); ?>
+
     </footer>
 </body>
 
